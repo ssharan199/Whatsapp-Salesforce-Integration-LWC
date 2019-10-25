@@ -1,0 +1,37 @@
+<template>
+        <div class="container">
+                <h1>
+                        Integrate Whatsapp and Salesforce in LWC
+                </h1>
+            <lightning-input 
+                type="text" 
+                label="Enter Mobile Number" 
+                name="mobilenumber"
+                placeholder="type mobile no here..."
+                onchange={onTextChange}
+                class="slds-col slds-large-size_10-of-12">
+            </lightning-input>
+            <br/>
+            <lightning-input 
+                type="text" 
+                label="Enter Message" 
+                name="message"
+                placeholder="type message here..."
+                onchange={onTextChange}
+                class="slds-col slds-large-size_10-of-12">
+           </lightning-input>
+           <br/>
+           <button
+                class="button" 
+                value="Whatsapp"                
+                onclick={handleClick}>
+          Whatsapp</button>
+           <template if:true={success}>
+               Message sent
+            </template>
+            <template if:true={error}>
+               Message Failed
+            </template>
+            <p class="slds-m-top_medium" style="color:blue; font-weight:bold;">{result}</p>
+        </div>
+</template>
