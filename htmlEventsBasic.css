@@ -1,0 +1,31 @@
+  .container {
+    max-width: 500px;
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    border: 2px solid green;
+    padding-left: 50px;
+    padding-top: 15px;
+    height: 300px;
+    background-color:honeydew;
+    margin-left:400px;
+
+  }
+  h1   {    
+    font-size: 20px;
+    font-weight: bold;
+    }
+  
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 5px;
+
+}
