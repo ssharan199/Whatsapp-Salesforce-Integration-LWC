@@ -4,8 +4,8 @@ public class WhatsAppMessageService {
     {
         errorResponseWrapper erw;
         final String fromNumber = '+14155238886'; 
-        String account = 'AC49037c677d36e57c135eb3060a9d1091';  
-        String token   = 'd5272c89f8bcbf2694814719975e9864';
+        String account = 'XXXX';  
+        String token   = 'XXXX';
         
         HttpRequest req = new HttpRequest();
         req.setEndpoint('https://api.twilio.com/2010-04-01/Accounts/'+account+'/Messages.json');
