@@ -21,11 +21,12 @@ The Chatbot can also answer questions about your company/services and if an exis
 The below link shows complete Explaination and Code for Whatsapp-Salesforce Integration in LWC. I will also show how to read any API documentation to collect necessary information for integration.
 
 In the article I will cover: 
-
-Different mediums used for Salesforce – Whatsapp integration
-Best Solution: Using Twilio API to integrate WhatsApp with Salesforce
-HTTP Protocol Basics
-How to read any API documentation to send HTTP Request
+<ul>
+  <li>Different mediums used for Salesforce – Whatsapp integration</li>
+  <li>Best Solution: Using Twilio API to integrate WhatsApp with Salesforce</li>
+  <li>HTTP Protocol Basics</li>
+  <li>How to read any API documentation to send HTTP Request</li>
+</ul>
 
 [Whatsapp-Salesforce-Integration-LWC](https://www.sfdcamplified.com/2019/10/whatsapp-salesforce-integration-in-lwc.html)
 
