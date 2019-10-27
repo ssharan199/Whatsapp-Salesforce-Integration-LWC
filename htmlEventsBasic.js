@@ -1,5 +1,5 @@
 import { LightningElement, track } from 'lwc';
-import send from '@salesforce/apex/WhatsAppMessageService.send';
+import makeCallout from '@salesforce/apex/WhatsappSalesforceIntegration.makeCallout';
 
 export default class HtmlEventsBasic extends LightningElement {
 
@@ -24,7 +24,7 @@ export default class HtmlEventsBasic extends LightningElement {
     handleClick() {
         this.currentResult = this.mobilenumber + this.message;
 
-        send( {mobileno: this.mobilenumber,
+        makeCallout( {mobileno: this.mobilenumber,
             message: this.message
         }).then(result => {
                 this.success = result;
@@ -35,7 +35,7 @@ export default class HtmlEventsBasic extends LightningElement {
         }
         get result() { 
             if(this.currentResult){
-              return `Whatsapp message sent from ${this.mobilenumber} is ${this.message}`;
+              return `Whatsapp message sent to ${this.mobilenumber} is ${this.message}`;
             }
             else{
                 return '';
