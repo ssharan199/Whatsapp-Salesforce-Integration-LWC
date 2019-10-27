@@ -2,7 +2,7 @@ public class WhatsappSalesforceIntegration {
  @AuraEnabled
 // Method to perform callouts
 public Static void makeCallout(string mobileno, string message){
-
+    JSON2Apex ja;
     // define a response to caller
     final String fromNumber = 'whatsapp:+14155238886'; 
     // define basic information for later, store these in a protected custom setting
@@ -56,11 +56,13 @@ public Static void makeCallout(string mobileno, string message){
             // check response 
             if ((res.getStatusCode() == 200 || res.getStatusCode() == 201) && res.getBody() != null && res.getBody() != null) {
               // Deserialize the response untyped
-              system.debug('Twilio success message: '+ message);
+                system.debug('Twilio success message: '+ message);
+               ja =(JSON2Apex)json.deserialize(res.getBody(),JSON2Apex.class);
+                system.debug('Twilio success: '+ja.message);
             }
             else{
-                    system.debug('Twilio failed: '+mobileno);
-                }
+                    system.debug('Twilio failed');
+              }
             }
         catch (exception e) {
             // Unexpected exceptions will be caught here, like a deserialization error.
@@ -68,5 +70,13 @@ public Static void makeCallout(string mobileno, string message){
         }
     }
     }
+}
+public class JSON2Apex {
+
+	public Integer code;
+	public String message;
+	public String more_info;
+	public Integer status;
+	
 }
 }
