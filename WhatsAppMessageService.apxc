@@ -8,8 +8,8 @@ public Static void makeCallout(string mobileno, string message){
     // define basic information for later, store these in a protected custom setting
     string resource = 'Messages.json';
     //Once you click Dashboard in the Twilio Sandbox on right hand side, you will be able to find account SID and auth Token
-    string username = 'AC963068478041a3329b046b42da7ae6c8'; 
-    string password = '55f80101c7e62f9bb91f0c2477c74db1';
+    string username = 'XXXX'; 
+    string password = 'XXXX';
     string method = 'POST';  
     string endpoint = 'https://api.twilio.com/2010-04-01/Accounts/'+username+'/'; 
  
